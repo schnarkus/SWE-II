@@ -4,5 +4,8 @@ body {
     margin: 0;
     font-family: Calibri;
     color: #003a7a;
-    overflow: hidden;
+  }
+
+  img {
+    border-radius: 10px;
   }
