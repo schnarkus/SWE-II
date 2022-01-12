@@ -1,33 +1,23 @@
 /*Datenbank*/
 
 
-DROP TABLE Firma; /* Tabellen werden gelöscht, wenn sie existieren, */
-DROP TABLE Auto; /* sonst kommt eine error-Meldung, die nicht von Bedeutung ist */
+DROP TABLE Marken; /* Tabellen werden gelöscht, wenn sie existieren, */
 
 
-CREATE TABLE Firma
+CREATE TABLE Marken
 (
-    FName VARCHAR2(10), /* Eigentlich TEXT */
-    AnzahlMA INTEGER,
-    IBAN TEXT /* SQLite3 akzeptiert viele ähnliche Datentypen */
+	Kriterium1 VARCHAR2(10), /* Eigentlich TEXT */
+	Kriterium2 VARCHAR2(10), /* Eigentlich TEXT */       
+	Kriterium3 VARCHAR2(10), /* Eigentlich TEXT */    
+	Kriterium4 VARCHAR2(10), /* Eigentlich TEXT */    
+	Kriterium5 VARCHAR2(10), /* Eigentlich TEXT */    
+	Kriterium6 VARCHAR2(10), /* Eigentlich TEXT */    
+	Kriterium7 VARCHAR2(10), /* Eigentlich TEXT */    
 );
 
-CREATE TABLE Auto
-(
-    KFZZeichen VARCHAR2(10),
-    FName VARCHAR2(10),
-    Modell VARCHAR2(8),
-    Baujahr INTEGER
-);
 
-INSERT INTO Firma VALUES ('Maxi-Taxi', 350, 'DE1234');
-INSERT INTO Firma VALUES ('Luxi-Taxi', 90, 'DE2345');
-INSERT INTO Firma VALUES ('Fixi-Taxi', 120, 'FR1234');
 
-INSERT INTO Auto VALUES ('BAZ-1718', 'Maxi-Taxi','VW', 2011);
-INSERT INTO Auto VALUES ('BMP-1718', 'Maxi-Taxi','Skoda', 2015);
-INSERT INTO Auto VALUES ('BKA-4253', 'Luxi-Taxi','Mercedes', 2000);
-INSERT INTO Auto VALUES ('BAZ-9876', 'Luxi-Taxi','BMW', 2011);
-INSERT INTO Auto VALUES ('BAZ-6789', 'Fixi-Taxi','VW', 2011);
+INSERT INTO Marken VALUES ('test1', 'test2', 'test3', 'test4', 'test5', 'test6', 'test7');
+
 
 

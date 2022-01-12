@@ -1,0 +1,1 @@
+#liest aus der datenbank die werte für zwei marken aus und gibt diese wieder
