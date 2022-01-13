@@ -174,11 +174,92 @@ Antibiotika verboten.', 'Max. 4 Stunden und max.
 
 /* Alle Tiere Demeter */
 
-INSERT INTO Siegel VALUES ('Demeter', 'Hähnchen', '', '.', '', '');
+INSERT INTO Siegel VALUES ('Demeter', 'Hähnchen', 'Im Stall max. 21 kg bzw. 10
+Tiere pro m², max. 3.000 pro
+Stall, zusätzlich zum Stall ist
+ein befestigter, überdachter
+Außenklimabereich sowie
+eine Freilandfläche mit mind.
+4 m² / Tier vorgeschrieben.', '100 % Bio-Futter; mind.
+50 % müssen vom eigenen
+Hof oder Kooperationen
+stammen.
+Gentechnisch veränderte
+Futtermittel sind verboten.', 'Schnäbelkürzen verboten.
+Prophylaktische Gabe von
+Antibiotika nicht zulässig, nur
+Behandlung einzelner Tiere
+erlaubt.', 'Keine konkreten Zahlen zur
+Transportdauer.
+Transportwege sollen so kurz
+wie möglich sein und deshalb
+die Tiere aus der Umgebung
+beschafft werden.');
 
-INSERT INTO Siegel VALUES ('Demeter', 'Rind', '', '.', '', '');
+INSERT INTO Siegel VALUES ('Demeter', 'Rind', '< 100 kg - 1,5 m² / Tier im
+Stall + 1,1 m² im Auslauf.
+< 200 kg - 2,5 m² / Tier im
+Stall + 1,9 m² im Auslauf.
+< 350 kg - 4,0 m² / Tier im
+Stall + 3,0 m² im Auslauf.
+> 350 kg - 5,0 m² / Tier im
+Stall + 3,7 m² im Auslauf.
+Bei Tieren über 350 kg mind.
+1 m² / 100 kg im Stall und
+0,75 m² / 100 kg auf der
+Außenfläche.
+Im Stall auf Einstreu, max.
+50 % der Stallfläche als
+Spaltenboden, Weidegang
+muss maximal ermöglicht
+werden. Ist dies in Ausnahme-
+fällen nicht möglich, muss
+alternativ ein ständiger
+Auslauf bereitgestellt werden.', '100 % Bio-Futter; mind. 60 %
+müssen vom eigenen Hof
+oder aus Kooperationen
+stammen.
+Gentechnisch veränderte
+Futtermittel verboten.', 'Entfernen der Hornanlagen
+bei Kälbern ist verboten.
+Enthornte Tiere dürfen nicht
+gehalten werden.
+Prophylaktische Gabe von
+Antibiotika nicht zulässig.', 'Keine konkreten Zahlen zur
+Transportdauer.
+Transportwege sollen so kurz
+wie möglich sein und deshalb
+die Tiere aus der Umgebung
+beschafft werden.');
 
-INSERT INTO Siegel VALUES ('Demeter', 'Schwein', '', '.', '', '');
+INSERT INTO Siegel VALUES ('Demeter', 'Schwein', '< 50 kg - 0,8 m² / Tier im
+Stall + 0,6 m² im Auslauf
+< 110 kg - 1,3 m² / Tier im
+Stall + 1,0 m² im Auslauf
+> 110 kg - 1,5 m² / Tier im
+Stall + 1,2 m² im Auslauf
+10 Tiere / Hektar. Im Stall auf
+Einstreu, max. 50 % der
+Stallfläche als Spaltenboden.', '100 % Bio-Futter; mind.
+50 % müssen vom eigenen
+Hof oder aus Kooperationen
+stammen.
+Gentechnisch veränderte
+Futtermittel verboten.', 'Ferkelkastration mit
+Betäubung und
+Schmerzmitteln erlaubt;
+Zähnekneifen oder -schleifen
+ist verboten; das Abschneiden
+von Ringelschwänzen darf
+nicht routinemäßig
+durchgeführt werden.
+Prophylaktische Gabe von
+Antibiotika nicht zulässig.', 'Keine konkreten Zahlen zur
+Transportdauer.
+Transportwege sollen so kurz
+wie möglich sein und deshalb
+die Tiere aus der Umgebung
+beschafft werden.');
 
 
 /* Alle Tiere Neuland */
