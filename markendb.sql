@@ -1,19 +1,19 @@
 /*Datenbank*/
 
 
-DROP TABLE Siegel; /* Tabellen werden gelöscht, wenn sie existieren, */
+/*DROP TABLE Siegel;*/ /* Tabellen werden gelöscht, wenn sie existieren, */
 
 
-CREATE TABLE Marken
+/*CREATE TABLE Siegel
 (
 	Bezeichnung VARCHAR2(50),
-	Tier VARCHAR2(20), /* Eigentlich TEXT */
-	Haltung_Auslauf VARCHAR2(400), /* Eigentlich TEXT */       
-	Futter VARCHAR2(400), /* Eigentlich TEXT */    
-	Gesundheit VARCHAR2(400), /* Eigentlich TEXT */    
-	Transport VARCHAR2(400) /* Eigentlich TEXT */      
+	Tier VARCHAR2(20), 
+	Haltung_Auslauf VARCHAR2(400),     
+	Futter VARCHAR2(400),    
+	Gesundheit VARCHAR2(400),     
+	Transport VARCHAR2(400)      
 );
-
+*/
 
 /* Alle Tiere Naturland */
 INSERT INTO Siegel VALUES ('Naturland', 'Hähnchen', 'Im Stall max. 21 kg bzw. 10
@@ -434,3 +434,6 @@ Transportdauer (in der EU bei
 Inlandstransporten max. 8
 Stunden, aber mit vielen
 Ausnahmen).');
+
+
+SELECT * from Siegel;
