@@ -6,16 +6,15 @@ from django.http import HttpResponse, request
 # Create your views here.
 
 def startseite(request):
-    return HttpResponse('<h1> Hallokk ff <h1>')
+    return render(request, 'siegelvergleich/index.html')
 
 
 def Rind(request):    
-    return HttpResponse('<h1> Rind </h1>')
-
+   return render(request, 'siegelvergleich/rind.html')
 
 def Haehnchen(request):    
-    return HttpResponse('<h1> Hähnchen </h1>')
+    return render(request, 'siegelvergleich/hähnchen.html')
 
 
 def Schwein(request):    
-    return HttpResponse('<h1> Schwein huhuuuuS </h1>')
+    return render(request, 'siegelvergleich/schwein.html')
