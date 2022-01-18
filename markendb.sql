@@ -434,6 +434,3 @@ Transportdauer (in der EU bei
 Inlandstransporten max. 8
 Stunden, aber mit vielen
 Ausnahmen).');
-
-
-SELECT * from Siegel;

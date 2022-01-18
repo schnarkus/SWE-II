@@ -1,1 +1,1 @@
-document.write("Tabelle")
+document.write("Hallo")
