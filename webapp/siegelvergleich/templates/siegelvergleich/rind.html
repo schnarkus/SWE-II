@@ -67,7 +67,9 @@
       <br>
     <fieldset>
         <table>
-            <script type="text/javascript" src="vergleich.js"></script>
+            {%for siegel in Objekte%}
+            {{siegel.bezeichnung}}<br>
+            {% endfor %}
         </table>
     </fieldset>
 </body>

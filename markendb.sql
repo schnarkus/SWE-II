@@ -4,8 +4,9 @@
 /*DROP TABLE Siegel;*/ /* Tabellen werden gelöscht, wenn sie existieren, */
 
 
-/*CREATE TABLE Siegel
+CREATE TABLE Siegel
 (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
 	Bezeichnung VARCHAR2(50),
 	Tier VARCHAR2(20), 
 	Haltung_Auslauf VARCHAR2(400),     
@@ -13,10 +14,10 @@
 	Gesundheit VARCHAR2(400),     
 	Transport VARCHAR2(400)      
 );
-*/
+
 
 /* Alle Tiere Naturland */
-INSERT INTO Siegel VALUES ('Naturland', 'Hähnchen', 'Im Stall max. 21 kg bzw. 10
+INSERT INTO Siegel (Bezeichnung, Tier, Haltung_Auslauf, Futter, Gesundheit, Transport) VALUES ('Naturland', 'Hähnchen', 'Im Stall max. 21 kg bzw. 10
 Tiere pro m², max. 4.800 Tiere
 pro Stall, zusätzlich zum Stall
 ist ein befestigter, überdachter
@@ -35,7 +36,7 @@ Antibiotika nur in
 Ausnahmefällen zulässig.', 'Transport max. 4 Stunden
 und max. 200 Kilometer.');
 
-INSERT INTO Siegel VALUES ('Naturland', 'Rind', '< 100 kg - 1,5 m² / Tier im
+INSERT INTO Siegel (Bezeichnung, Tier, Haltung_Auslauf, Futter, Gesundheit, Transport) VALUES ('Naturland', 'Rind', '< 100 kg - 1,5 m² / Tier im
 Stall + 1,1 m² im Auslauf.
 < 200 kg - 2,5 m² / Tier im
 Stall + 1,9 m² im Auslauf.
@@ -67,7 +68,7 @@ Antibiotika nicht zulässig.', 'Transport max. 4 Stunden
 und max. 200 Kilometer.');
 
 
-INSERT INTO Siegel VALUES ('Naturland', 'Schwein', '< 50 kg - 0,8 m² / Tier im
+INSERT INTO Siegel (Bezeichnung, Tier, Haltung_Auslauf, Futter, Gesundheit, Transport) VALUES ('Naturland', 'Schwein', '< 50 kg - 0,8 m² / Tier im
 Stall + 0,6 m² im Auslauf
 < 110 kg - 1,3 m² / Tier im
 Stall + 1,0 m² im Auslauf
@@ -97,7 +98,7 @@ Ausnahmefällen zulässig.', 'Max. 4 Stunden und max.
 
 /* Alle Tiere Bioland */
 
-INSERT INTO Siegel VALUES ('Bioland', 'Hähnchen', 'Im Stall max. 21 kg bzw.
+INSERT INTO Siegel (Bezeichnung, Tier, Haltung_Auslauf, Futter, Gesundheit, Transport) VALUES ('Bioland', 'Hähnchen', 'Im Stall max. 21 kg bzw.
 10 Tiere pro m², max. 4.800
 Tiere pro Stall, zusätzlich zum
 Stall ist ein befestigter,
@@ -116,7 +117,7 @@ Antibiotika nur in
 Ausnahmefällen zulässig.', 'Transport max. 4 Stunden
 und max. 200 Kilometer.');
 
-INSERT INTO Siegel VALUES ('Bioland', 'Rind', '< 100 kg - 1,5 m² / Tier im
+INSERT INTO Siegel (Bezeichnung, Tier, Haltung_Auslauf, Futter, Gesundheit, Transport) VALUES ('Bioland', 'Rind', '< 100 kg - 1,5 m² / Tier im
 Stall + 1,1 m² im Auslauf.
 < 200 kg - 2,5 m² / Tier im
 Stall + 1,9 m² im Auslauf.
@@ -144,7 +145,7 @@ Prophylaktische Gabe von
 Antibiotika verboten', 'Max. 4 Stunden und max.
 200 Kilometer Strecke.');
 
-INSERT INTO Siegel VALUES ('Bioland', 'Schwein', '< 50 kg - 0,8 m² / Tier im
+INSERT INTO Siegel (Bezeichnung, Tier, Haltung_Auslauf, Futter, Gesundheit, Transport) VALUES ('Bioland', 'Schwein', '< 50 kg - 0,8 m² / Tier im
 Stall + 0,6 m² im Auslauf
 < 85 kg - 1,1 m² / Tier im
 Stall + 0,8 m² im Auslauf
@@ -174,7 +175,7 @@ Antibiotika verboten.', 'Max. 4 Stunden und max.
 
 /* Alle Tiere Demeter */
 
-INSERT INTO Siegel VALUES ('Demeter', 'Hähnchen', 'Im Stall max. 21 kg bzw. 10
+INSERT INTO Siegel (Bezeichnung, Tier, Haltung_Auslauf, Futter, Gesundheit, Transport) VALUES ('Demeter', 'Hähnchen', 'Im Stall max. 21 kg bzw. 10
 Tiere pro m², max. 3.000 pro
 Stall, zusätzlich zum Stall ist
 ein befestigter, überdachter
@@ -196,7 +197,7 @@ wie möglich sein und deshalb
 die Tiere aus der Umgebung
 beschafft werden.');
 
-INSERT INTO Siegel VALUES ('Demeter', 'Rind', '< 100 kg - 1,5 m² / Tier im
+INSERT INTO Siegel (Bezeichnung, Tier, Haltung_Auslauf, Futter, Gesundheit, Transport) VALUES ('Demeter', 'Rind', '< 100 kg - 1,5 m² / Tier im
 Stall + 1,1 m² im Auslauf.
 < 200 kg - 2,5 m² / Tier im
 Stall + 1,9 m² im Auslauf.
@@ -232,7 +233,7 @@ wie möglich sein und deshalb
 die Tiere aus der Umgebung
 beschafft werden.');
 
-INSERT INTO Siegel VALUES ('Demeter', 'Schwein', '< 50 kg - 0,8 m² / Tier im
+INSERT INTO Siegel (Bezeichnung, Tier, Haltung_Auslauf, Futter, Gesundheit, Transport) VALUES ('Demeter', 'Schwein', '< 50 kg - 0,8 m² / Tier im
 Stall + 0,6 m² im Auslauf
 < 110 kg - 1,3 m² / Tier im
 Stall + 1,0 m² im Auslauf
@@ -264,7 +265,7 @@ beschafft werden.');
 
 /* Alle Tiere Neuland */
 
-INSERT INTO Siegel VALUES ('Neuland', 'Hähnchen', 'Im Stall max. 21 kg bzw.
+INSERT INTO Siegel (Bezeichnung, Tier, Haltung_Auslauf, Futter, Gesundheit, Transport) VALUES ('Neuland', 'Hähnchen', 'Im Stall max. 21 kg bzw.
 10 Tiere pro m², max. 4.800
 Tiere pro Stall, zusätzlich zum
 Stall ist ein befestigter,
@@ -284,7 +285,7 @@ Indikation durch den Tierarzt
 eingesetzt werden.', 'Transport max. 4 Stunden und
 max. 200 Kilometer.');
 
-INSERT INTO Siegel VALUES ('Neuland', 'Rind', '< 100 kg - 1,0 m² / Tier im
+INSERT INTO Siegel (Bezeichnung, Tier, Haltung_Auslauf, Futter, Gesundheit, Transport) VALUES ('Neuland', 'Rind', '< 100 kg - 1,0 m² / Tier im
 Stall + 0,75 m² im Auslauf.
 < 200 kg - 2,0 m² / Tier im
 Stall + 1,5 m² im Auslauf.
@@ -312,7 +313,7 @@ Prophylaktische Gabe von
 Antibiotika nicht zulässig.', 'Max. 4 Stunden und max.
 200 Kilometer Strecke.');
 
-INSERT INTO Siegel VALUES ('Neuland', 'Schwein', '< 60 kg - 0,5 m² / Tier im
+INSERT INTO Siegel (Bezeichnung, Tier, Haltung_Auslauf, Futter, Gesundheit, Transport) VALUES ('Neuland', 'Schwein', '< 60 kg - 0,5 m² / Tier im
 Stall + 0,3 m² im Auslauf
 < 120 kg - 1,0 m² / Tier im
 Stall + 0,5 m² im Auslauf
@@ -345,7 +346,7 @@ eingesetzt werden.', 'Max. 4 Stunden und max.
 
 /* Alle Tiere EU-Bio */
 
-INSERT INTO Siegel VALUES ('EU-Bio', 'Hähnchen', 'Im Stall max. 21 kg bzw.
+INSERT INTO Siegel (Bezeichnung, Tier, Haltung_Auslauf, Futter, Gesundheit, Transport) VALUES ('EU-Bio', 'Hähnchen', 'Im Stall max. 21 kg bzw.
 10 Tiere pro m², max. 4.800
 Tiere pro Stall, zusätzlich zum
 Stall ist ein befestigter,
@@ -367,7 +368,7 @@ Inlandstransporten max.
 8 Stunden, aber mit vielen
 Ausnahmen).');
 
-INSERT INTO Siegel VALUES ('EU-Bio', 'Rind', '< 100 kg - 1,5 m² / Tier im
+INSERT INTO Siegel (Bezeichnung, Tier, Haltung_Auslauf, Futter, Gesundheit, Transport) VALUES ('EU-Bio', 'Rind', '< 100 kg - 1,5 m² / Tier im
 Stall + 1,1 m² im Auslauf.
 < 200 kg - 2,5 m² / Tier im
 Stall m², + 1,9 m² im Auslauf.
@@ -405,7 +406,7 @@ Inlandstransporten max.
 8 Stunden, aber mit vielen
 Ausnahmen).');
 
-INSERT INTO Siegel VALUES ('EU-Bio', 'Schwein', '< 50 kg - 0,8 m² / Tier im
+INSERT INTO Siegel (Bezeichnung, Tier, Haltung_Auslauf, Futter, Gesundheit, Transport) VALUES ('EU-Bio', 'Schwein', '< 50 kg - 0,8 m² / Tier im
 Stall + 0,6 m² im Auslauf
 < 85 kg - 1,1 m² / Tier im
 Stall + 0,8 m² im Auslauf
