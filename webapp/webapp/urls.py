@@ -19,9 +19,12 @@ from django.contrib import admin
 
 #from webapp import siegelvergleich
 
+app_name = "webapp"
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^startseite/', include('siegelvergleich.urls')),
+    url(r'siegelvergleich/', include('siegelvergleich.urls', namespace='siegelvergleich')),
     #url('Rind/', include('siegelvergleich.urls')), 
   #  url(r'^Schwein/', include('siegelvergleich.urls')),  
   #  url(r'^Haehnchen/', include('siegelvergleich.urls')) 

@@ -18,12 +18,13 @@
       <li>Klicke auf "Vergleichen"</li>
       <li>Kaufe bewusst ein!</li>
     </ol>
-    <form>
+    <form  action="" method='POST'>> 
+    {% csrf_token %}
       <fieldset>
         <legend>Vergleich</legend>
         <label for="siegel1">Erstes Siegel: </label>
-        <select id="siegel1">
-            <option value="null"></option>
+        <select name="siegel1" id="siegel1">
+  <!--          <option value="null"></option>
             <option value="Naturland">Naturland</option>
             <option value="Bioland">Bioland</option>
             <option value="demeter">demeter</option>
@@ -39,11 +40,18 @@
             <option value="Haltungsform 1 (Stallhaltung)">Haltungsform 1 (Stallhaltung)</option>
             <option value="Haltungsform 2 (Stallhaltung plus)">Haltungsform 2 (Stallhaltung plus)</option>
             <option value="Haltungsform 3 (Außenklima)">Haltungsform 3 (Außenklima)</option>
-            <option value="Haltungsform 4 (Premium)">Haltungsform 4 (Premium)</option>
+            <option value="Haltungsform 4 (Premium)">Haltungsform 4 (Premium)</option>  -->
+
+            {%for siegel in Objekte%}
+
+            <option value={{siegel.id}}>{{siegel.bezeichnung}}</option>
+            {% endfor %}           
+
+
         </select>
         <label for="siegel2">Zweites Siegel: </label>
-        <select id="siegel2">
-            <option value="null"></option>
+        <select name="siegel2" id="siegel2">
+     <!--       <option value="null"></option>
             <option value="Naturland">Naturland</option>
             <option value="Bioland">Bioland</option>
             <option value="demeter">demeter</option>
@@ -59,18 +67,46 @@
             <option value="Haltungsform 1 (Stallhaltung)">Haltungsform 1 (Stallhaltung)</option>
             <option value="Haltungsform 2 (Stallhaltung plus)">Haltungsform 2 (Stallhaltung plus)</option>
             <option value="Haltungsform 3 (Außenklima)">Haltungsform 3 (Außenklima)</option>
-            <option value="Haltungsform 4 (Premium)">Haltungsform 4 (Premium)</option>
+            <option value="Haltungsform 4 (Premium)">Haltungsform 4 (Premium)</option> -->
+
+            {%for siegel in Objekte%}
+
+            <option value={{siegel.id}}>{{siegel.bezeichnung}}</option>
+            {% endfor %}          
         </select>
-        <button type="button" class="button">Vergleichen</button>
+        <button type="submit" class="button" onclick=view.Rindwahl>Vergleichen</button>
     </form>
       </fieldset>
       <br>
     <fieldset>
-        <table>
+   <!--     <table>
             {%for siegel in Objekte%}
             {{siegel.futter}}<br>
             {% endfor %}
-        </table>
+        </table> -->
+
+        <table>
+            <tr>
+                <th> {{erste_wahl.0.bezeichnung}}</th>
+                <th> {{zweite_wahl.0.bezeichnung}}</th>
+            </tr>
+            <tr>
+                <td>{{erste_wahl.0.haltung_auslauf}}</td>
+                <td>{{zweite_wahl.0.haltung_auslauf}}</td>
+            </tr>
+            <tr>
+                <td>{{erste_wahl.0.futter}}</td>
+                <td>{{zweite_wahl.0.futter}}</td>
+            </tr>
+            <tr>
+                <td>{{erste_wahl.0.gesundheit}}</td>
+                <td>{{zweite_wahl.0.gesundheit}}</td>
+            </tr>
+            <tr>
+                <td>{{erste_wahl.0.transport}}</td>
+                <td>{{zweite_wahl.0.transport}}</td>
+            </tr>
+        </table>    
     </fieldset>
 </body>
 </html>
