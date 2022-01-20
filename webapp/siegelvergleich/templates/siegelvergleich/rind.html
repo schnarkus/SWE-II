@@ -18,7 +18,7 @@
       <li>Klicke auf "Vergleichen"</li>
       <li>Kaufe bewusst ein!</li>
     </ol>
-    <form  action="" method='POST'>> 
+    <form  action="" method='POST'>
     {% csrf_token %}
       <fieldset>
         <legend>Vergleich</legend>
@@ -79,30 +79,30 @@
       </fieldset>
       <br>
     <fieldset>
-   <!--     <table>
-            {%for siegel in Objekte%}
-            {{siegel.futter}}<br>
-            {% endfor %}
-        </table> -->
 
-        <table>
+        <table border="1" cellpadding="3%">
             <tr>
+                <td>Siegel</td>
                 <th> {{erste_wahl.0.bezeichnung}}</th>
                 <th> {{zweite_wahl.0.bezeichnung}}</th>
             </tr>
             <tr>
+                <td>Haltung und  Auslauf</td>
                 <td>{{erste_wahl.0.haltung_auslauf}}</td>
                 <td>{{zweite_wahl.0.haltung_auslauf}}</td>
             </tr>
             <tr>
+                <td>Futter</td>
                 <td>{{erste_wahl.0.futter}}</td>
                 <td>{{zweite_wahl.0.futter}}</td>
             </tr>
             <tr>
+                <td>Gesundheit</td>
                 <td>{{erste_wahl.0.gesundheit}}</td>
                 <td>{{zweite_wahl.0.gesundheit}}</td>
             </tr>
             <tr>
+                <td>Transport</td>
                 <td>{{erste_wahl.0.transport}}</td>
                 <td>{{zweite_wahl.0.transport}}</td>
             </tr>
