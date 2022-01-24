@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="{% static 'css/main.css' %}" /> <!--Einbinden der CSS-Datei-->
+    <title>Rind</title> <!--Name des Tabs-->
+</head>
+<body>
+    <!--Verlinkung zurück auf die Homepage-->
+    <a href=".."><img width="30" src="https://banner2.cleanpng.com/20190624/jye/kisspng-computer-icons-vector-graphics-house-portable-netw-new-home-buyers-guide-new-home-buyers-guide-5d10c2fe847419.8008434115613795825425.jpg" alt="Home"></a>
+    <p><h2>Anleitung:</h2></p>
+    <ol>
+      <li>Wähle die Siegel aus</li>
+      <li>Klicke auf "Vergleichen"</li>
+      <li>Kaufe bewusst ein!</li>
+    </ol>
+    <form  action="" method='POST'>
+    {% csrf_token %}
+      <fieldset>
+        <legend>Vergleich</legend>
+        <label for="siegel1">Erstes Siegel: </label>
+        <select name="siegel1" id="siegel1"> 
+            <option value="null"></option>
+            {%for siegel in Objekte%}
+
+            <option value={{siegel.id}}>{{siegel.bezeichnung}}</option>
+            {% endfor %}           
+
+
+        </select>
+        <label for="siegel2">Zweites Siegel: </label>
+        <select name="siegel2" id="siegel2">
+            <option value="null"></option>
+            {%for siegel in Objekte%}
+
+            <option value={{siegel.id}}>{{siegel.bezeichnung}}</option>
+            {% endfor %}          
+        </select>
+        <button type="submit" class="button" onclick=view.Rindwahl>Vergleichen</button>
+    </form>
+      </fieldset>
+      <br>
+    <fieldset>
+
+        <table border="1" cellpadding="3%">
+            <tr>
+                <td>Siegel test</td>
+                <th> {{erste_wahl.0.bezeichnung}}</th>
+                <th> {{zweite_wahl.0.bezeichnung}}</th>
+            </tr>
+            <tr>
+                <td>Haltung und  Auslauf</td>
+                <td>{{erste_wahl.0.haltung_auslauf}}</td>
+                <td>{{zweite_wahl.0.haltung_auslauf}}</td>
+            </tr>
+            <tr>
+                <td>Futter</td>
+                <td>{{erste_wahl.0.futter}}</td>
+                <td>{{zweite_wahl.0.futter}}</td>
+            </tr>
+            <tr>
+                <td>Gesundheit</td>
+                <td>{{erste_wahl.0.gesundheit}}</td>
+                <td>{{zweite_wahl.0.gesundheit}}</td>
+            </tr>
+            <tr>
+                <td>Transport</td>
+                <td>{{erste_wahl.0.transport}}</td>
+                <td>{{zweite_wahl.0.transport}}</td>
+            </tr>
+        </table>    
+    </fieldset>
+</body>
+</html>
