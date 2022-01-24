@@ -20,7 +20,10 @@ def Rind(request):
         siegel_1=Siegel.objects.filter(id=id1)  
         siegel_2=Siegel.objects.filter(id=id2)  
 
-    return render(request, 'siegelvergleich/rind.html', context={'Objekte': rind_Siegel,'erste_wahl':siegel_1,'zweite_wahl':siegel_2})     
+        return render(request, 'siegelvergleich/rindwahl.html', context={'Objekte': rind_Siegel,'erste_wahl':siegel_1,'zweite_wahl':siegel_2})     
+
+    else:
+        return render(request, 'siegelvergleich/rind.html', context={'Objekte': rind_Siegel})
   #  rind_Siegel=Siegel.objects.filter(tier='Rind')
    #     return render(request, 'siegelvergleich/rind.html', {'Objekte': siegel})
    # if Siegel_ids==-1:
