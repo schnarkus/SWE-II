@@ -1,13 +1,12 @@
 {% load static %}
 
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}" /> <!--Einbinden der CSS-Datei-->
+    <link rel="stylesheet"  href="{% static 'css/main.css' %}" /> <!--Einbinden der CSS-Datei-->
     <title>Schwein</title> <!--Name des Tabs-->
 </head>
 <body>
@@ -19,57 +18,31 @@
       <li>Klicke auf "Vergleichen"</li>
       <li>Kaufe bewusst ein!</li>
     </ol>
-    <form>
+    <form  action="" method='POST'>
+    {% csrf_token %}
       <fieldset>
         <legend>Vergleich</legend>
         <label for="siegel1">Erstes Siegel: </label>
-        <select id="siegel1">
+        <select name="siegel1" id="siegel1"> 
+
             <option value="null"></option>
-            <option value="Naturland">Naturland</option>
-            <option value="Bioland">Bioland</option>
-            <option value="demeter">demeter</option>
-            <option value="Neuland">Neuland</option>
-            <option value="EU-Bio">EU-Bio</option>
-            <option value="Tierschutz kontrolliert „Gold“ von VIER PFOTEN">Tierschutz kontrolliert „Gold“ von VIER PFOTEN</option>
-            <option value="Tierschutz kontrolliert „Silber“ von VIER PFOTEN">Tierschutz kontrolliert „Silber“ von VIER PFOTEN</option>
-            <option value="DTB Premium">DTB Premium</option>
-            <option value="DTB Einstieg">DTB Einstieg</option>
-            <option value="QS">QS</option>
-            <option value="Initiative Tierwohl">Initiative Tierwohl</option>
-            <option value="DLG">DLG</option>
-            <option value="Haltungsform 1 (Stallhaltung)">Haltungsform 1 (Stallhaltung)</option>
-            <option value="Haltungsform 2 (Stallhaltung plus)">Haltungsform 2 (Stallhaltung plus)</option>
-            <option value="Haltungsform 3 (Außenklima)">Haltungsform 3 (Außenklima)</option>
-            <option value="Haltungsform 4 (Premium)">Haltungsform 4 (Premium)</option>
+            {%for siegel in Objekte%}
+
+            <option value={{siegel.id}}>{{siegel.bezeichnung}}</option>
+            {% endfor %}           
+
+
         </select>
         <label for="siegel2">Zweites Siegel: </label>
-        <select id="siegel2">
+        <select name="siegel2" id="siegel2">
+
             <option value="null"></option>
-            <option value="Naturland">Naturland</option>
-            <option value="Bioland">Bioland</option>
-            <option value="demeter">demeter</option>
-            <option value="Neuland">Neuland</option>
-            <option value="EU-Bio">EU-Bio</option>
-            <option value="Tierschutz kontrolliert „Gold“ von VIER PFOTEN">Tierschutz kontrolliert „Gold“ von VIER PFOTEN</option>
-            <option value="Tierschutz kontrolliert „Silber“ von VIER PFOTEN">Tierschutz kontrolliert „Silber“ von VIER PFOTEN</option>
-            <option value="DTB Premium">DTB Premium</option>
-            <option value="DTB Einstieg">DTB Einstieg</option>
-            <option value="QS">QS</option>
-            <option value="Initiative Tierwohl">Initiative Tierwohl</option>
-            <option value="DLG">DLG</option>
-            <option value="Haltungsform 1 (Stallhaltung)">Haltungsform 1 (Stallhaltung)</option>
-            <option value="Haltungsform 2 (Stallhaltung plus)">Haltungsform 2 (Stallhaltung plus)</option>
-            <option value="Haltungsform 3 (Außenklima)">Haltungsform 3 (Außenklima)</option>
-            <option value="Haltungsform 4 (Premium)">Haltungsform 4 (Premium)</option>
+            {%for siegel in Objekte%}
+
+            <option value={{siegel.id}}>{{siegel.bezeichnung}}</option>
+            {% endfor %}          
         </select>
-        <button type="button" class="button">Vergleichen</button>
+        <button type="submit" class="button" onclick=view.Schwein>Vergleichen</button>
     </form>
-      </fieldset>
-      <br>
-    <fieldset>
-        <table>
-            <script type="text/javascript" src="vergleich.js"></script>
-        </table>
-    </fieldset>
 </body>
 </html>

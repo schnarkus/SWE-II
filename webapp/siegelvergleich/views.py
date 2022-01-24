@@ -43,32 +43,32 @@ def Rind(request):
 def Haehnchen(request):    
     siegel_1=""
     siegel_2=""
-    rind_Siegel=Siegel.objects.filter(tier='Hähnchen')
+    hähnchen_Siegel=Siegel.objects.filter(tier='Hähnchen')
     if request.method == "POST":  
         id1=request.POST['siegel1']
         id2=request.POST['siegel2']
         siegel_1=Siegel.objects.filter(id=id1)  
         siegel_2=Siegel.objects.filter(id=id2)  
 
-        return render(request, 'siegelvergleich/hähnchenwahl.html', context={'Objekte': rind_Siegel,'erste_wahl':siegel_1,'zweite_wahl':siegel_2})     
+        return render(request, 'siegelvergleich/hähnchenwahl.html', context={'Objekte': hähnchen_Siegel,'erste_wahl':siegel_1,'zweite_wahl':siegel_2})     
 
     else:
-        return render(request, 'siegelvergleich/hähnchen.html', context={'Objekte': rind_Siegel})
+        return render(request, 'siegelvergleich/hähnchen.html', context={'Objekte': hähnchen_Siegel})
   #  return render(request, 'siegelvergleich/hähnchen.html')
 
 
 def Schwein(request):    
     siegel_1=""
     siegel_2=""
-    rind_Siegel=Siegel.objects.filter(tier='Schwein')
+    schwein_Siegel=Siegel.objects.filter(tier='Schwein')
     if request.method == "POST":  
         id1=request.POST['siegel1']
         id2=request.POST['siegel2']
         siegel_1=Siegel.objects.filter(id=id1)  
         siegel_2=Siegel.objects.filter(id=id2)  
 
-        return render(request, 'siegelvergleich/schweinwahl.html', context={'Objekte': rind_Siegel,'erste_wahl':siegel_1,'zweite_wahl':siegel_2})     
+        return render(request, 'siegelvergleich/schweinwahl.html', context={'Objekte': schwein_Siegel,'erste_wahl':siegel_1,'zweite_wahl':siegel_2})     
 
     else:
-        return render(request, 'siegelvergleich/schwein.html', context={'Objekte': rind_Siegel})
+        return render(request, 'siegelvergleich/schwein.html', context={'Objekte': schwein_Siegel})
    #  return render(request, 'siegelvergleich/schwein.html')
