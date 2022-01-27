@@ -1,23 +1,93 @@
-<!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css" /> <!--Einbinden der CSS-Datei-->
-    <title>SealTheDeal©</title> <!--Name des Tabs-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <title>SealTheDeal</title>
 </head>
 <body>
-    <h1>SealTheDeal©</h1>
-    <h2>Fleisch-Kennzeichnung – was sagen die Siegel aus?</h2>
-    <img
-      width="500" src="https://www.wwf.de/fileadmin/_processed_/9/4/csm_supermarkt-fleisch-einkaufen-c-iStock-GettyImages_1a1bbaad07.jpg" alt="Fleischtheke"/>
-    <br>
-    <br>
-    <ul> <!--Auswahlmenü-->
-        <li><a href="hähnchen.html">Hähnchen</a></li>
-        <li><a href="rind.html">Rind</a></li>
-        <li><a href="schwein.html">Schwein</a></li>
-      </ul>
+  <nav class="navbar is-white has-shadow">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img src="images/logo.png" style="max-height: 70px">
+      </a>
+      <a class="navbar-burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+  
+    <div class="navbar-menu" id="nav-links">
+      <div class="navbar-start">
+        <a class="navbar-item" href="hähnchen.html">Hähnchen</a>
+        <a class="navbar-item" href="rind.html">Rind</a>
+        <a class="navbar-item" href="schwein.html">Schwein</a>
+      </div>
+    </div>
+</nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-vcentered is-multiline">
+        <div class="column is-6-tablet is-5-desktop">
+          <h1 class="is-size-3-mobile is-size-1-desktop title">SealTheDeal</h1>
+          <h2 class="is-size-3-mobile is-size-2-desktop subtitle">Fleisch-Kennzeichnung</h2>
+          <p>Es gibt eine Vielfalt an Siegeln in der Lebensmittelproduktion, vor allem bei der Kennzeichnung von Fleisch. Doch was bedeuten sie?</p>
+        </div>
+        <div class="column is-6-tablet is-5-desktop has-text-centered">
+          <img src="images/siegel.PNG" alt="label image" class="px-6">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-variable is-8">
+        <div class="column is-7-tablet">
+
+          <div class="tabs is-boxed is-centered">
+            <ul>
+              <li class="is-active" data-target="bio">
+                <a>Bio</a> 
+              </li>
+              <li data-target="tierschutz">
+                <a>Tierschutz</a>
+              </li>
+              <li data-target="haltungsform">
+                <a>Haltungsform</a>
+              </li>
+            </ul>
+          </div>
+          <div class="px-2" id="tab-content">
+            <div id="bio">
+              <h3 class="is-size-5 title">Bio</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, reprehenderit voluptates! Quisquam dolores distinctio minima eligendi, sint enim quaerat. Totam eaque eligendi quis, itaque beatae id sit fuga voluptatibus a autem debitis sequi, officiis dolores corporis! Necessitatibus, libero voluptate? Fuga, natus iusto! Perspiciatis iure officiis rerum, illo temporibus iusto voluptatum.</p>
+            </div>
+            <div id="tierschutz" class="is-hidden">
+              <h3 class="is-size-5 title">Tierschutz</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, reprehenderit voluptates! Quisquam dolores distinctio minima eligendi, sint enim quaerat. Totam eaque eligendi quis, itaque beatae id sit fuga voluptatibus a autem debitis sequi, officiis dolores corporis! Necessitatibus, libero voluptate? Fuga, natus iusto! Perspiciatis iure officiis rerum, illo temporibus iusto voluptatum.</p>
+            </div>
+            <div id="haltungsform" class="is-hidden">
+              <h3 class="is-size-5 title">Haltungsform</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, reprehenderit voluptates! Quisquam dolores distinctio minima eligendi, sint enim quaerat. Totam eaque eligendi quis, itaque beatae id sit fuga voluptatibus a autem debitis sequi, officiis dolores corporis! Necessitatibus, libero voluptate? Fuga, natus iusto! Perspiciatis iure officiis rerum, illo temporibus iusto voluptatum.</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <iframe width="509" height="286" src="https://www.youtube.com/embed/QjGb-Ld1JNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer mt-6">
+    <div class="content has-text-centered">
+      <p>© 2022 SealTheDeal. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
 </body>
 </html>
