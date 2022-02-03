@@ -13,11 +13,11 @@
 
     <style>
         div.columns {
-          margin-top: 50px;
+          margin-top: 20px;
         }
      
         h1 {
-          color: green !important;
+          color: SeaGreen !important;
           margin-bottom: 10px;
      
         }
@@ -55,12 +55,19 @@
         </div>
       </div>
     </nav>
-    <form  action="" method='POST'>
+
+
+
+  <!--spalte1-->
+  <div class="columns is-multiline is-mobile is-vcentered">
+    <div class="column is-one-quarter">
+      <form  action="" method='POST'>
         {% csrf_token %}
       <section class="section">
-        <div class="columns">
-            <div class="column">
+ 
+          <hr>
               <div class="container has-text-centered">
+                <label class="label" for="siegel1">Erstes Siegel: </label>
                  <div class="select">
                      <select name="siegel1" id="siegel1">
                      <option value="null"></option>
@@ -71,29 +78,36 @@
                          </select>
                       </div>
                     </div>
-                </div>
-                <div class="column">
+       </section>
+       <section class="section">
         <div class="container has-text-centered">
+          <label class="label" for="siegel2">Zweites Siegel: </label>
           <div class="select">
             <select name="siegel2" id="siegel2">
+              
               <option value="null"></option>
               {%for siegel in Objekte%}
   
               <option value={{siegel.id}}>{{siegel.bezeichnung}}</option>
               {% endfor %}  
             </select>
-          </div>
-        </div>
-    </div>
-</div>
+          </div>  
+        </div
+
       </section>
-  
+      <section class="section">
         <div class="container has-text-centered">
           <button class="button is-primary" onclick=view.Haehnchen>Vergleichen</button>
         </div>
       </form>
+      <hr>
       </section>
-  
+    </div>
+    
+    
+
+    <div class="column">
+  <!--spalte2-->
       <div class='container has-text-centered'>
         <div class='columns is-mobile is-centered'>
           <div class='column is-8'>
@@ -136,6 +150,14 @@
     </div>
 </div>
 </div>
+</div>
+</div>
+<footer class="footer mt-6">
+  <div class="content has-text-centered">
+    <p>© 2022 SealTheDeal. Alle Rechte vorbehalten.</p>
+  </div>
+</form>
+</footer>
 
 </body>
 </html>

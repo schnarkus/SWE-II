@@ -35,7 +35,9 @@
     <form  action="" method='POST'>
       {% csrf_token %}
     <section class="section">
+   
       <div class="container has-text-centered">
+        <label class="label" for="siegel1">Erstes Siegel: </label>
         <div class="select">
           <select name="siegel1" id="siegel1">
           
@@ -51,6 +53,7 @@
 
     <section class="section">
       <div class="container has-text-centered">
+        <label class="label" for="siegel2">Zweites Siegel: </label>
         <div class="select">
           <select name="siegel2" id="siegel2">
             <option value="null"></option>
@@ -67,6 +70,7 @@
       <div class="container has-text-centered">
         <button class="button is-primary" onclick=view.Rind>Vergleichen</button>
       </div>
+     
     </section>
 
     <footer class="footer mt-6">
