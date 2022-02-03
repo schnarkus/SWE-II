@@ -1,0 +1,83 @@
+{% load static %}
+
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <title>Schwein</title>
+  </head>
+  <body>
+    <nav class="navbar is-white has-shadow">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="..">
+          <img src="{% static "images/logo.png" %}" style="max-height: 70px" />
+        </a>
+        <a class="navbar-burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+
+      <div class="navbar-menu" id="nav-links">
+        <div class="navbar-start">
+          <a class="navbar-item" href="../Haehnchen/">Hähnchen</a>
+          <a class="navbar-item" href="../Rind/">Rind</a>
+          <a class="navbar-item" href=".">Schwein</a>
+        </div>
+      </div>
+    </nav>
+
+    <form  action="" method='POST'>
+      {% csrf_token %}
+    <section class="section">
+      <div class="container has-text-centered">
+        <div class="select">
+          <select name="siegel1" id="siegel1">
+           
+            <option value="null"></option>
+            {%for siegel in Objekte%}
+
+            <option value={{siegel.id}}>{{siegel.bezeichnung}}</option>
+            {% endfor %}      
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container has-text-centered">
+        <div class="select">
+          <select name="siegel2" id="siegel2">
+        
+            <option value="null"></option>
+            {%for siegel in Objekte%}
+
+            <option value={{siegel.id}}>{{siegel.bezeichnung}}</option>
+            {% endfor %}      
+
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container has-text-centered">
+        <button class="button is-primary" onclick=view.Schwein>Vergleichen</button>
+      </div>
+    </section>
+
+    <footer class="footer mt-6">
+      <div class="content has-text-centered">
+        <p>© 2022 SealTheDeal. Alle Rechte vorbehalten.</p>
+      </div>
+    </form>
+    </footer>
+
+    <script src="{% static "index.js" %}"></script>
+  </body>
+</html>
