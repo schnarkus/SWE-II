@@ -9,7 +9,7 @@ from .models import Siegel
 # Create your views here.
 
 def startseite(request):
-    return render(request, 'siegelvergleich/index.html')
+    return render(request, 'siegelvergleich/index_neuesdesign.html')
 
 
 def Rind(request):  
@@ -27,25 +27,11 @@ def Rind(request):
 
         else:
             warnung='Bitte wähle zwei Siegel zum Vergleich aus.'
-            return render(request, 'siegelvergleich/rind.html', context={'Objekte': rind_Siegel,'warnung':warnung})     
+            return render(request, 'siegelvergleich/rind_neuesdesign.html', context={'Objekte': rind_Siegel,'warnung':warnung})     
 
     else:
-        return render(request, 'siegelvergleich/rind.html', context={'Objekte': rind_Siegel})
-  #  rind_Siegel=Siegel.objects.filter(tier='Rind')
-   #     return render(request, 'siegelvergleich/rind.html', {'Objekte': siegel})
-   # if Siegel_ids==-1:
-  #      rind_Siegel=Siegel.objects.filter(tier='Rind')
-  #      return render(request, 'siegelvergleich/rind.html', {'Objekte': rind_Siegel})
+        return render(request, 'siegelvergleich/rind_neuesdesign.html', context={'Objekte': rind_Siegel})
 
- #   else:
- #       rind_Siegel=Siegel.objects.filter(tier='Rind')
-   #     return render(request, 'siegelvergleich/rind.html', {'Objekte': rind_Siegel})   
-
-#def Rindwahl(request, id1, id2):
-#  siegel_1=Siegel.objects.filter(id=id1)  
-#  siegel_2=Siegel.objects.filter(id=id2)  
-#  rind_Siegel=Siegel.objects.filter(tier='Rind')
-#  return render(request, 'siegelvergleich/rind.html', context={'Objekte': rind_Siegel, 'erste_wahl': siegel_1, 'zweite_wahl': siegel_2}) 
 
 def Haehnchen(request):    
     siegel_1=""
@@ -63,11 +49,10 @@ def Haehnchen(request):
 
         else:
             warnung='Bitte wähle zwei Siegel zum Vergleich aus.'
-            return render(request, 'siegelvergleich/hähnchen.html', context={'Objekte': haehnchen_Siegel,'warnung':warnung})     
+            return render(request, 'siegelvergleich/hähnchen_neuesdesign.html', context={'Objekte': haehnchen_Siegel,'warnung':warnung})     
 
     else:
-        return render(request, 'siegelvergleich/hähnchen.html', context={'Objekte': haehnchen_Siegel})
-  #  return render(request, 'siegelvergleich/hähnchen.html')
+        return render(request, 'siegelvergleich/hähnchen_neuesdesign.html', context={'Objekte': haehnchen_Siegel})
 
 
 def Schwein(request):    
@@ -85,8 +70,8 @@ def Schwein(request):
 
         else:
             warnung='Bitte wähle zwei Siegel zum Vergleich aus.'
-            return render(request, 'siegelvergleich/schwein.html', context={'Objekte': schwein_Siegel,'warnung':warnung})     
+            return render(request, 'siegelvergleich/schwein_neuesdesign.html', context={'Objekte': schwein_Siegel,'warnung':warnung})     
 
     else:
-        return render(request, 'siegelvergleich/schwein.html', context={'Objekte': schwein_Siegel})
-   #  return render(request, 'siegelvergleich/schwein.html')
+        return render(request, 'siegelvergleich/schwein_neuesdesign.html', context={'Objekte': schwein_Siegel})
+
