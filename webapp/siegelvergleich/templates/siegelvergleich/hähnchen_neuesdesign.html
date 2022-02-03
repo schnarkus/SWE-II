@@ -9,7 +9,15 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
     />
     <title>Hähnchen</title>
+    <style>
+      .warning {
+        margin-top: 20px;
+        text-align: center;
+        color: red;
+      }
+      </style>
   </head>
+
   <body>
     <nav class="navbar is-white has-shadow">
       <div class="navbar-brand">
@@ -31,7 +39,7 @@
         </div>
       </div>
     </nav>
-
+    <p class="warning"> {{warnung}} </p>
     <form  action="" method='POST'>
       {% csrf_token %}
     <section class="section">
