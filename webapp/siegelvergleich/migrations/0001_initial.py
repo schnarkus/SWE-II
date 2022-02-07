@@ -148,6 +148,7 @@ class Migration(migrations.Migration):
                 ('futter', models.CharField(blank=True, db_column='Futter', max_length=800, null=True)),
                 ('gesundheit', models.CharField(blank=True, db_column='Gesundheit', max_length=800, null=True)),
                 ('transport', models.CharField(blank=True, db_column='Transport', max_length=800, null=True)),
+                ('logo', models.CharField(blank=True, db_column='Logo', max_length=800, null=True)),
             ],
             options={
                 'db_table': 'Siegel',

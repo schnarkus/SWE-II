@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link    
     rel="stylesheet"
+  .center {
     href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"/> <!--Einbinden der CSS-Datei-->
     <title>Hähnchen</title> <!--Name des Tabs-->
     <style>
@@ -28,6 +29,14 @@
       .table th {
         font-size: 17px
       }
+      
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70% 
+      }
+
     </style>
 
 </head>
@@ -63,7 +72,6 @@
       <form  action="" method='POST'>
         {% csrf_token %}
       <section class="section">
- 
           <hr>
               <div class="container has-text-centered">
                 <label class="label" for="siegel1">Erstes Siegel: </label>
@@ -120,7 +128,6 @@
                 <th>Siegel </th>
                 <th> {{erste_wahl.0.bezeichnung}}</th>
                 <th> {{zweite_wahl.0.bezeichnung}}</th>
-
             </tr>
         </thead>
         <tbody>
@@ -144,6 +151,11 @@
                 <td>{{erste_wahl.0.transport}}</td>
                 <td>{{zweite_wahl.0.transport}}</td>
             </tr>
+            <tr>
+              <th>Logo</th>
+              <td> <img src= {{erste_wahl.0.logo}}  class="center"> </td>
+              <td> <img src= {{zweite_wahl.0.logo}} class="center"> </td>
+          </tr>
         </tbody>
         </table>    
     </div>

@@ -18,7 +18,7 @@ class Siegel(models.Model):
     futter = models.CharField(db_column='Futter', blank=True, null=True, max_length=800)  # Field name made lowercase. This field type is a guess.
     gesundheit = models.CharField(db_column='Gesundheit', blank=True, null=True, max_length=800)  # Field name made lowercase. This field type is a guess.
     transport = models.CharField(db_column='Transport', blank=True, null=True, max_length=800)  # Field name made lowercase. This field type is a guess.
-
+    logo = models.CharField(db_column='Logo', blank=True, null=True, max_length=800)  # Field name made lowercase. This field type is a guess.
 
     def __str__(self):
         return self.title

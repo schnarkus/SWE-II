@@ -28,6 +28,14 @@
       .table th {
         font-size: 17px
       }
+
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70% 
+      }
+
     </style>
 </head>
 
@@ -143,6 +151,11 @@
                 <td>{{erste_wahl.0.transport}}</td>
                 <td>{{zweite_wahl.0.transport}}</td>
             </tr>
+            <tr>
+              <th>Logo</th>
+              <td> <img src= {{erste_wahl.0.logo}}  class="center"> </td>
+              <td> <img src= {{zweite_wahl.0.logo}} class="center"> </td>
+          </tr>
         </tbody>
         </table>    
     </div>
