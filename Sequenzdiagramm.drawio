@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="AMog5M7C-SyizyRK8FtY" name="Page-1">
-        <mxGraphModel dx="1651" dy="929" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="520" dy="478" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -270,13 +270,13 @@
                         <mxPoint y="-7" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="52" value="&lt;font style=&quot;font-size: 10px&quot;&gt;[Benutzen der &lt;br&gt;Vergleichsfunktion //WIP]&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-                    <mxGeometry x="385" y="374" width="130" height="40" as="geometry"/>
+                <mxCell id="52" value="&lt;font style=&quot;font-size: 10px&quot;&gt;[Benutzen der &lt;br&gt;Vergleichsfunktion]&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="374" width="100" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="54" value="Erneutes Rendering mit &lt;br&gt;Datenbankinformationen" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" parent="1" vertex="1">
                     <mxGeometry x="1400" y="710" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="56" value="" style="verticalAlign=bottom;endArrow=block;endSize=8;shadow=0;strokeWidth=1;exitX=0.958;exitY=0.414;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;endFill=1;dashed=1;" edge="1" parent="1" target="24">
+                <mxCell id="56" value="" style="verticalAlign=bottom;endArrow=block;endSize=8;shadow=0;strokeWidth=1;exitX=0.958;exitY=0.414;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;endFill=1;dashed=1;" parent="1" target="24" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="1135.4900000000002" y="657.0900000000001" as="targetPoint"/>
                         <mxPoint x="1130.0000000000002" y="640.0300000000001" as="sourcePoint"/>
