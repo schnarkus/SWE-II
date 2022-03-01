@@ -24,6 +24,7 @@ app_name = "webapp"
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^startseite/', include('siegelvergleich.urls')),
+    url(r'', include('siegelvergleich.urls')),
  #   url(r'siegelvergleich/', include('siegelvergleich.urls', namespace='siegelvergleich')),
     #url('Rind/', include('siegelvergleich.urls')), 
   #  url(r'^Schwein/', include('siegelvergleich.urls')),  
