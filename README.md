@@ -1,10 +1,11 @@
 # SealTheDeal
 
-## von Luise Frerichs, Tempest Glodowski, Dario Neumann und Markus Simianer
+### von Luise Frerichs, Tempest Glodowski, Dario Neumann und Markus Simianer
 
 ## Python-Umgebung erstellen
 
 Python 3.6 venv lokal aufsetzen
+
 .\venv\Scripts\activate
 
 ## Server starten
