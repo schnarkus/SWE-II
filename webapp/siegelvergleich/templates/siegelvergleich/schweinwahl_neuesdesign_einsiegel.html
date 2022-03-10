@@ -9,34 +9,36 @@
     <link    
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"/> <!--Einbinden der CSS-Datei-->
-    <title>Rind</title> <!--Name des Tabs-->
-    <style>
-      div.columns {
-        margin-top: 20px;
-      }
-   
-      h1 {
-        color: SeaGreen !important;
-        margin-bottom: 10px;
-   
-      }
-   
-      .table td {
-        font-size: 17px
-      }
-   
-      .table th {
-        font-size: 17px
-      }
+    <title>Schwein</title> <!--Name des Tabs-->
 
-      .center {
+    <style>
+        div.columns {
+          margin-top: 20px;
+        }
+     
+        h1 {
+          color: SeaGreen !important;
+          margin-bottom: 10px;
+     
+        }
+     
+        .table td {
+          font-size: 17px
+        }
+     
+        .table th {
+          font-size: 17px
+        }
+
+        .center {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 70% 
       }
 
-    </style>
+      </style>
+
 </head>
 
 
@@ -121,43 +123,38 @@
               <h1 class='title'>Siegelvergleich</h1>
               <hr>
             </div>
+            <center>
             <table class='table is-bordered is-hoverable'>
                 <thead>
             <tr>
                 <th>Siegel </th>
                 <th> {{erste_wahl.0.bezeichnung}}</th>
-                <th> {{zweite_wahl.0.bezeichnung}}</th>
-
-            </tr>
+           </tr>
         </thead>
         <tbody>
             <tr>
                 <th>Haltung und  Auslauf</th>
                 <td>{{erste_wahl.0.haltung_auslauf}}</td>
-                <td>{{zweite_wahl.0.haltung_auslauf}}</td>
             </tr>
             <tr>
                 <th>Futter</th>
                 <td>{{erste_wahl.0.futter}}</td>
-                <td>{{zweite_wahl.0.futter}}</td>
             </tr>
             <tr>
                 <th>Gesundheit</th>
                 <td>{{erste_wahl.0.gesundheit}}</td>
-                <td>{{zweite_wahl.0.gesundheit}}</td>
             </tr>
             <tr>
                 <th>Transport</th>
                 <td>{{erste_wahl.0.transport}}</td>
-                <td>{{zweite_wahl.0.transport}}</td>
             </tr>
             <tr>
               <th>Logo</th>
               <td style="width:25em; height:25em text-align:center; vertical-align:middle"> <img src= {{erste_wahl.0.logo}} style="max-height:100%; max-width:100%"> </td>
-              <td style="width:25em; height:25em; text-align:center; vertical-align:middle"> <img src= {{zweite_wahl.0.logo}} style="max-height:100%; max-width:100%"> </td>
-          </tr>
+               </tr>
         </tbody>
-        </table>    
+        </table>   
+      </center> 
     </div>
 </div>
 </div>
@@ -169,5 +166,6 @@
   </div>
 </form>
 </footer>
+
 </body>
 </html>

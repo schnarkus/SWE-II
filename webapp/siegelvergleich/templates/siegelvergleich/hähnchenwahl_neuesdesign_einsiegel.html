@@ -1,0 +1,169 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link    
+    rel="stylesheet"
+  .center {
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"/> <!--Einbinden der CSS-Datei-->
+    <title>Hähnchen</title> <!--Name des Tabs-->
+    <style>
+      div.columns {
+        margin-top: 20px;
+      }
+   
+      h1 {
+        color: SeaGreen !important;
+        margin-bottom: 10px;
+   
+      }
+   
+      .table td {
+        font-size: 17px
+      }
+   
+      .table th {
+        font-size: 17px
+      }
+      
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70% 
+      }
+
+    </style>
+
+</head>
+
+
+<body>
+    <nav class="navbar is-white has-shadow">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="..">
+          <img src="{% static "images/logo.png" %}" style="max-height: 70px" />
+        </a>
+        <a class="navbar-burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+
+      <div class="navbar-menu" id="nav-links">
+        <div class="navbar-start">
+          <a class="navbar-item" href=".">Hähnchen</a>
+          <a class="navbar-item" href="../Rind/">Rind</a>
+          <a class="navbar-item" href="../Schwein/">Schwein</a>
+        </div>
+      </div>
+    </nav>
+
+
+
+  <!--spalte1-->
+  <div class="columns is-multiline is-mobile is-vcentered">
+    <div class="column is-one-quarter">
+      <form  action="" method='POST'>
+        {% csrf_token %}
+      <section class="section">
+          <hr>
+              <div class="container has-text-centered">
+                <label class="label" for="siegel1">Erstes Siegel: </label>
+                 <div class="select">
+                     <select name="siegel1" id="siegel1">
+                     <option value="null"></option>
+                        {%for siegel in Objekte%}
+  
+                         <option value={{siegel.id}}>{{siegel.bezeichnung}}</option>
+                       {% endfor %}  
+                         </select>
+                      </div>
+                    </div>
+       </section>
+       <section class="section">
+        <div class="container has-text-centered">
+          <label class="label" for="siegel2">Zweites Siegel: </label>
+          <div class="select">
+            <select name="siegel2" id="siegel2">
+              
+              <option value="null"></option>
+              {%for siegel in Objekte%}
+  
+              <option value={{siegel.id}}>{{siegel.bezeichnung}}</option>
+              {% endfor %}  
+            </select>
+          </div>  
+        </div
+
+      </section>
+      <section class="section">
+        <div class="container has-text-centered">
+          <button class="button is-primary" onclick=view.Haehnchen>Vergleichen</button>
+        </div>
+      </form>
+      <hr>
+      </section>
+    </div>
+    
+    
+
+    <div class="column">
+  <!--spalte2-->
+      <div class='container has-text-centered'>
+        <div class='columns is-mobile is-centered'>
+          <div class='column is-8'>
+            <div>
+              <h1 class='title'>Siegelvergleich</h1>
+              <hr>
+            </div>
+            <center>
+            <table class='table is-bordered is-hoverable'>
+                <thead>
+            <tr>
+                <th>Siegel </th>
+                <th> {{erste_wahl.0.bezeichnung}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Haltung und  Auslauf</th>
+                <td>{{erste_wahl.0.haltung_auslauf}}</td>
+            </tr>
+            <tr>
+                <th>Futter</th>
+                <td>{{erste_wahl.0.futter}}</td>
+            </tr>
+            <tr>
+                <th>Gesundheit</th>
+                <td>{{erste_wahl.0.gesundheit}}</td>
+            </tr>
+            <tr>
+                <th>Transport</th>
+                <td>{{erste_wahl.0.transport}}</td>
+            </tr>
+            <tr>
+              <th>Logo</th>
+              <td style="width:25em; height:25em text-align:center; vertical-align:middle"> <img src= {{erste_wahl.0.logo}} style="max-height:100%; max-width:100%"> </td>
+          </tr>
+        </tbody>
+        </table>  
+      </center>  
+    </div>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer mt-6">
+  <div class="content has-text-centered">
+    <p>© 2022 SealTheDeal. Alle Rechte vorbehalten.</p>
+  </div>
+</form>
+</footer>
+</body>
+</html>
